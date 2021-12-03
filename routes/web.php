@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MajalahController;
+use App\Http\Controllers\PPPController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PublikasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +24,9 @@ Route::get('/master', function () {
 });
 Route::get('/', function () {
     return view('home');
+});
+Route::get('/profil', function () {
+    return view('profil');
 });
 Route::get('/kpbu', function () {
     return view('kpbu');
@@ -52,3 +58,24 @@ Route::get('/perbedaan-kpbu', function () {
 Route::get('/skema-pengembalian', function () {
     return view('kpbu.skema-pengembalian');
 });
+// Route::get('/majalah', function () {
+//     return view('majalah.index');
+// });
+
+// publikasi majalah
+Route::get('/publikasi-majalah', [PublikasiController::class, 'majalah']);
+
+Route::get('/majalah-upload', [MajalahController::class, 'upload']);
+Route::post('/upload/proses', [MajalahController::class, 'proses_upload']);
+
+// publikasi majalah
+Route::get('/publikasi-ppp', [PublikasiController::class, 'ppp']);
+
+Route::get('/ppp-upload', [PPPController::class, 'upload']);
+Route::post('/upload/proses-ppp', [PPPController::class, 'proses_upload']);
+
+// publikasi majalah
+Route::get('/publikasi-newsletter', [PublikasiController::class, 'newsletter']);
+
+Route::get('/newsletter-upload', [NewsletterController::class, 'upload']);
+Route::post('/upload/proses-newsletter', [NewsletterController::class, 'proses_upload']);

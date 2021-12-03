@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="row p-5">
-        <div class="kpbu card col-lg-4 col-md-12" style="line-height: 20px;">
+    <div class="row p-5" style="width: 100%;">
+        <div class="kpbu card col-lg-4 col-md-12" style="line-height: 1.25rem;">
             <ul>
                 <li><a href="/apa-itu-kpbu">Apa itu KPBU ?</a></li>
                 <li><a href="/kesalahan-umum-kpbu">Apa kesalahpahaman umum tentang KPBU ?</a></li>

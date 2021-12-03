@@ -9,6 +9,8 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/DataTables/datatables.min.css') }}"/>
+    
     <title>Hello, world!</title>
   </head>
   <body>
@@ -16,15 +18,15 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light header-nav fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand"  href="#"><img src="{{ asset('assets/images/logo-bappenas.png') }}" width="50px" height="auto">
-            </a>
-            <h5 style="font-size: 10px">
-            <b>
-            DIREKTORAT PENGEMBANGAN PENDANAAN PEMBANGUNAN <br />
-            KEMENTRIAN PERENCANAAN PEMBANGUNAN NASIONAL / <br />
-            BADAN PERENCANAAN PEMBANGUNAN NASIONAL
-          </b>
-          </h5>
+          <a class="navbar-brand"  href="/"><img src="{{ asset('assets/images/logo-bappenas.png') }}" style="width: 3.1rem;" height="auto">
+          </a>
+          <a href="/">
+            <h5 style="font-size: 0.62rem; color: #EAEDF0 !important;"><b>
+              DIREKTORAT PENGEMBANGAN PENDANAAN PEMBANGUNAN <br />
+              KEMENTRIAN PERENCANAAN PEMBANGUNAN NASIONAL / <br />
+              BADAN PERENCANAAN PEMBANGUNAN NASIONAL
+            </b></h5>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -33,25 +35,25 @@
           <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
             <ul class="navbar-nav me-1 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">PROFIL</a>
+                <a class="nav-link" style="color: #EAEDF0 !important;" aria-current="page" href="/profil">PROFIL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">KANTOR BERSAMA</a>
+                <a class="nav-link" href="#" style="color: #EAEDF0 !important;">KANTOR BERSAMA</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" style="color: #EAEDF0 !important;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   PUBLIKASI
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #B0B8C3">
-                  <li><a class="dropdown-item" href="#">PPP Book</a></li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #5B6D8A">
+                  <li><a class="dropdown-item" style="color: #EAEDF0 !important;" href="/publikasi-ppp">PPP Book</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                  <li><a class="dropdown-item" style="color: #EAEDF0 !important;" href="/publikasi-newsletter">Newsletter</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Majalah</a></li>
+                  <li><a class="dropdown-item" style="color: #EAEDF0 !important;" href="/publikasi-majalah">Majalah</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/apa-itu-kpbu" tabindex="-1" aria-disabled="true">KPBU</a>
+                <a class="nav-link" style="color: #EAEDF0 !important;" href="/apa-itu-kpbu" tabindex="-1" aria-disabled="true">KPBU</a>
               </li>
             </ul>
           </div>
@@ -63,10 +65,12 @@
 
 
 {{-- content --}}
-
-  <div class="content" style="background-color: #C4C4C433 !important;">
+<div class="content-wrapper">
+  <div class="content" style="background-color: #F2F8FA !important;">
     @yield('content')
   </div>
+  @yield('modal')
+</div>
 {{-- content --}}
 
 
@@ -86,11 +90,11 @@
 
   <footer class="footer text-center text-lg-start"  style="background-color: #01347C; width: 100%;">
     <!-- Grid container -->
-    <div class="container" style="padding: 20px 10px 0px 10px;">
+    <div class="container" style="padding: 1.25rem; 0.6rem 0rem 0.6rem;">
       <!--Grid row-->
-      <div class="foot row" style="height: 200px;">
+      <div class="foot row" style="height: 4rem;">
         <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-uppercase " style="font-size: 10px; color:#fff;">
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-uppercase " style="font-size: 0.72rem; color:#fff;">
           <span><b>direktorat pengembangan pendanaan pembangunan</b> </span><br>
           <span><b>kementrian perencanaan pembangunan nasional /</b> </span><br>
           <span><b>badan perencanaan pembangunan nasional (bappenas)</b></span>
@@ -99,14 +103,14 @@
 
         <!--Grid column-->
         <div class="location col-lg-4 col-md-12 mb-4 mb-md-0">
-          <div style="height: 15px;">
-            <a href="" style="font-size: 12px !important; color:#fff; font-family: sans;">
+          <div style="height: 0.9rem;">
+            <a href="" style="font-size: 0.75rem; !important; color:#fff; font-family: sans;">
               <img src="{{ asset('assets/images/plane.png') }}" alt="" class="logo-2">
                 Jalan Taman Suropati No.2 Jakarta 10310
             </a>
           </div>
-          <div  style="height: 15px;">
-            <a href="" style="font-size: 12px !important; color:#fff; padding-top: 9px;">
+          <div  style="height: 0.9rem;">
+            <a href="" style="font-size: 0.75rem; !important; color:#fff; padding-top: 0.56rem;">
               <img src="{{ asset('assets/images/email.png') }}" alt="" class="logo-2">
                   ppp.bappenas.go.id
             </a>
@@ -120,15 +124,15 @@
               <img src="{{ asset('assets/images/fb.png') }}" class="logo">
               <img src="{{ asset('assets/images/tw.png') }}" class="logo">
             </div>
-            <div class="menu-foot" style=" color:#fff; height: 15px;">
-              <a href="#" style="margin: 0px !important; font-size: 12px !important; color:#fff;">Peta Situs</a>
-              <span style="margin: 0px 3px 0px 3px !important;">|</span>
-              <a href="#" style="margin: 0px !important;font-size: 12px !important; color:#fff;">Beranda</a>
-              <span style="margin: 0px 3px 0px 3px !important;">|</span>
-              <a href="#" style="margin: 0px !important; font-size: 12px !important; color:#fff;">FAQs</a>
+            <div class="menu-foot" style=" color:#fff; height: 0.9rem;">
+              <a href="#" style="margin: 0rem !important; font-size: 0.75rem !important; color:#fff;">Peta Situs</a>
+              <span style="margin: 0rem 0.18rem 0rem 0.18rem !important; font-size: 0.75rem !important;">|</span>
+              <a href="#" style="margin: 0rem !important;font-size: 0.75rem !important; color:#fff;">Beranda</a>
+              <span style="margin: 0rem 0.18rem 0rem 0.18rem !important; font-size: 0.75rem !important;">|</span>
+              <a href="#" style="margin: 0rem !important; font-size: 0.75rem !important; color:#fff;">FAQs</a>
             </div>
-            <div class="menu-foot2" style="height: 15px;">
-              <a href="#" style="margin: 0px !important; font-size: 12px !important; color:#fff;">Kontak Kami</a>
+            <div class="menu-foot2" style="height: 0.9rem;">
+              <a href="#" style="margin: 0rem !important; font-size: 0.75rem !important; color:#fff;">Kontak Kami</a>
             </div>
         </div>
         <!--Grid column-->
@@ -139,25 +143,20 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 10px;">
+    <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.6rem;">
       © Kementrian Perencanaan Pembangunan Nasional, Republik Indonesia
     </div>
     <!-- Copyright -->
   </footer>
 
-    
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    @stack('before-script')
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    {{-- <script type="text/javascript"> 
-      var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
-      if (mobile) { 
-          alert("MOBILE DEVICE!!");
-          $('.navWrap').css('display', 'none'); // OR you can use $('.navWrap').hide();
-      } 
-      else 
-      { 
-         alert("NOT A MOBILE DEVICE!!"); 
-      }
-  </script>  --}}
+    <script type="text/javascript" src="{{ asset('assets/DataTables/datatables.min.js') }}"></script>
+
+    @stack('page-script')
+
+    @stack('after-script')
+
   </body>
 </html>

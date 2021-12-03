@@ -3,14 +3,15 @@
 
 html, body{
     font-family: 'sans-serif';
-    font-size: 15px;
+    font-size: 0.93rem;
     line-height:1.5;
     box-sizing: border-box;
-    overflow: scroll;
+    /* overflow: scroll; */
     overflow-x: hidden;
     margin: 0;
     top: 0;
-    left: 10px !important;
+    left: 0.62rem !important;
+    
 }
 
 
@@ -19,7 +20,7 @@ a {
     text-decoration: none !important;
     color: rgba(red, green, blue, alpha) !important;
     font-weight: 700 !important;
-    font-size: 15px !important;
+    font-size: 0.93rem !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     /* margin: 1.7rem !important; */
 }
@@ -37,27 +38,27 @@ ul {
 }
 
     .navbar {
-        background: #B0B8C3 !important;
+        background: #282B35 !important;
         padding: 3rem 2rem !important;
         height: 0rem !important;
         min-height: 12vh !important;
         top: 0px;
-        margin-top: -30px;
+        margin-top: -1.875rem;
     }
 
 @media only screen and (min-width: 992px) {
     .navbar {
-        background: #B0B8C3 !important;
+        background: #282B35 !important;
         padding: 3rem 2rem !important;
         height: 0rem !important;
         min-height: 12vh !important;
         top: 0px;
-        margin-top: 0px !important;
+        margin-top: 0rem !important;
     }
 }
 
 .navbar-nav > li > .dropdown-menu a:hover {
-    background-color: #B0B8C3 !important;
+    background-color: #5B6D8A !important;
     background-image: none !important;
 }
 
@@ -73,34 +74,34 @@ b {
 }
 
 .navbar-toggler {
-    background: #B0B8C3 !important;
+    background: #5B6D8A !important;
     border: none !important;
-    padding: 10px 6px !important;
+    padding: 0.625rem 0.375rem !important;
     outline: none !important;
 }
 
 .navbar-toggler span {
     display: block !important;
-    width: 22px !important;
-    height: 2px !important;
-    border: 1px !important;
+    width: 1.375rem !important;
+    height: 0.125rem !important;
+    border: 0.063rem !important;
     background: #fff !important;
 }
 
 .navbar-toggler span + span {
-    margin-top: 4px !important;
-    width: 18px !important;
-    margin-left: 4px !important;
+    margin-top: 0.25rem !important;
+    width: 1.125rem !important;
+    margin-left: 0.25 !important;
 }
 
 .navbar-toggler span + span + span {
-    width: 10px !important;
-    margin-left: 10px !important;
+    width: 0.625rem !important;
+    margin-left: 0.625rem !important;
 }
 
 .dropdown-item {
     width: auto;
-    background-color: #B0B8C3;
+    background-color: #5B6D8A;
 }   
 
 .container-fluid {
@@ -115,7 +116,11 @@ b {
     .container-fluid b{
         display: none !important;
         padding-left: 0px !important;
-        background-color: #B0B8C3;
+        
+    }
+
+    .container-fluid{
+        background-color: #5B6D8A;
     }
 }
 
@@ -124,24 +129,32 @@ b {
 }
 /* header */
 
-
 /* content */
 .content{
-    padding-top: 90px;
+    padding-top: 80px;
     /* padding-bottom: 30px; */
-    height: 768px;
+    /* height: fit-content; */
     font-family: sans-serif;
+    padding-bottom: 3rem;
 }
 
 .centered-pict{
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 4.375rem;
 }
+
+@media only screen and (max-width: 992px) {
+    .centered-word{
+        margin-top: -7rem;
+    }
+}
+
+
 
 .centered-word{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 9.375rem;
 }
 
 .centered-word p{
@@ -157,39 +170,42 @@ b {
 
 .content img{
     /* position: absolute; */
-width: 434px;
-height: 290px;
+width: 27.125rem;
+height: 18.125rem;
 /* left: 377px; */
  
 }
 
 .kpbu{
-    height: fit-content;
-    background-color: #01347C; 
+    height: 30rem;
+    max-width: 28rem;
+    background-color: #0091D1; 
+    border-radius: 1em;
 }
 
 .kpbu li{
-    padding-top: 15px;
-    padding-right: 30px;
+    padding-top: 1rem;
+    padding-right: 1.8rem;
     text-align: center;
 }
 
 .kpbu a{
     color: #F8F8F8;
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: 1rem;
 
 }
 .kpbu2{
-    padding: 15px;
-    max-width: 421px;
-    background-color: #EEEEEE; 
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    padding: 1rem;
+    max-width: 27rem;
+    background-color: #fff; 
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
     
 }
 .kpbu2 h5{
     text-align: center;
-    padding-top: 15px;
+    padding-top: 0.9rem;
 }
 
 .skema-kpbu{
@@ -198,30 +214,68 @@ height: 290px;
 }
 
 .scroll {
-    max-height: 446px;
-    max-width: 843px;
+    max-height: 30rem;
+    max-width: 60rem;
     overflow-y: scroll;
     scrollbar-width: thin;
 }
+
+.profil-1{
+    width: 57rem;
+    height: 30rem;
+    margin: 4rem 0 0 6rem !important;
+    border-radius: 1em;
+}
+
+.profil-1 li{
+    text-align: justify;
+}
+
+.profil-2{
+    max-width: 18rem;
+    height: 30rem;
+    margin: 4rem 5rem 0 0 !important;
+    /* display: flex; */
+    border-radius: 1em;
+    
+}
+
+.profil-card img{
+    height: 8rem;
+    width: 6rem;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    border-radius: 15px;
+    margin-left: 4.375rem;
+}
+
+/* .profil-card img{
+    height: 8rem;
+    width: 6rem;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    background-color: #C2C9D1;
+} */
+
 /* content */
 
 /* footer */
 .logo{
-    height: 20px;
-    width: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
     justify-content: center;
 }
 
 .logo-2{
-    height: 13px;
-    width: 13px;
+    height: 0.8rem;
+    width: 0.8rem;
     justify-content: center;
 }
 
 .logo-md{
     align-items: center;
-    padding-bottom : 10px;
-    height: 30px;
+    padding-bottom : 0.6rem;
+    height: 1.9rem;
     width: 100%;
     text-align: center;
 }
@@ -235,11 +289,11 @@ height: 290px;
 }
 
 .location img{
-    margin-right: 5px;
+    margin-right: 0.3rem;
 }
 
 .menu-sm a{
-    font-size: 19px !important;
+    font-size: 1.18rem !important;
     font-family: sans-serif !important;
     font-weight: normal !important;
     text-align: center !important;
@@ -261,20 +315,20 @@ height: 290px;
     bottom: 0px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 992px) {
     .foot {
-        height: 80px !important;
+        height: 12rem !important;
     }
 
     .foot span{
-        font-size: 11px;
+        font-size: 0.68rem;
         font-family: sans-serif;
         color: #fff;
-        font-weight: 300 !important;
+        font-weight: 18.75rem !important;
     }
 
     .foot a{
-        font-size: 15px !important;
+        font-size: 0.93rem !important;
     }
 }
 
