@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/DataTables/datatables.min.css') }}"/>
     
-    <title>Hello, world!</title>
+    <title>PPP Bappenas - @yield('title')</title>
   </head>
   <body>
     <!--navbar start-->
@@ -44,7 +44,7 @@
                 <a class="nav-link dropdown-toggle" style="color: #EAEDF0 !important;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   PUBLIKASI
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #5B6D8A">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #282B35">
                   <li><a class="dropdown-item" style="color: #EAEDF0 !important;" href="/publikasi-ppp">PPP Book</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" style="color: #EAEDF0 !important;" href="/publikasi-newsletter">Newsletter</a></li>
@@ -95,22 +95,24 @@
       <div class="foot row" style="height: 4rem;">
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-uppercase " style="font-size: 0.72rem; color:#fff;">
-          <span><b>direktorat pengembangan pendanaan pembangunan</b> </span><br>
-          <span><b>kementrian perencanaan pembangunan nasional /</b> </span><br>
-          <span><b>badan perencanaan pembangunan nasional (bappenas)</b></span>
+          <a href="/" style="font-size: 0.7rem !important; color :white;">
+            <span><b>direktorat pengembangan pendanaan pembangunan</b> </span><br>
+            <span><b>kementrian perencanaan pembangunan nasional /</b> </span><br>
+            <span><b>badan perencanaan pembangunan nasional (bappenas)</b></span>
+          </a>
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
         <div class="location col-lg-4 col-md-12 mb-4 mb-md-0">
           <div style="height: 0.9rem;">
-            <a href="" style="font-size: 0.75rem; !important; color:#fff; font-family: sans;">
+            <a href="https://www.google.co.id/maps/place/Jl.+Taman+Suropati+No.2,+RT.5%2FRW.5,+Menteng,+Kec.+Menteng,+Kota+Jakarta+Pusat,+Daerah+Khusus+Ibukota+Jakarta+10310/@-6.2012966,106.8205379,3895m/data=!3m1!1e3!4m5!3m4!1s0x2e69f417271b6ddf:0x42803916192efcf3!8m2!3d-6.2008991!4d106.8324028?hl=id" style="font-size: 0.75rem; !important; color:#fff; font-family: sans;">
               <img src="{{ asset('assets/images/plane.png') }}" alt="" class="logo-2">
                 Jalan Taman Suropati No.2 Jakarta 10310
             </a>
           </div>
           <div  style="height: 0.9rem;">
-            <a href="" style="font-size: 0.75rem; !important; color:#fff; padding-top: 0.56rem;">
+            <a href="mailto:someone@yoursite.com" style="font-size: 0.75rem; !important; color:#fff; padding-top: 0.56rem;">
               <img src="{{ asset('assets/images/email.png') }}" alt="" class="logo-2">
                   ppp.bappenas.go.id
             </a>
@@ -121,8 +123,8 @@
         <!--Grid column-->
         <div class="menu-sm col-lg-4 col-md-12 mb-4 mb-md-0">
             <div class="logo-md">
-              <img src="{{ asset('assets/images/fb.png') }}" class="logo">
-              <img src="{{ asset('assets/images/tw.png') }}" class="logo">
+              <a href="https://www.facebook.com/kpbuindonesia/"><img src="{{ asset('assets/images/fb.png') }}" class="logo"></a>
+              <a href="https://twitter.com/kpbuindonesia"><img src="{{ asset('assets/images/tw.png') }}" class="logo"></a>
             </div>
             <div class="menu-foot" style=" color:#fff; height: 0.9rem;">
               <a href="#" style="margin: 0rem !important; font-size: 0.75rem !important; color:#fff;">Peta Situs</a>

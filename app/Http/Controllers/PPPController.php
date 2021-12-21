@@ -16,7 +16,7 @@ class PPPController extends Controller
 		$this->validate($request, [
 			'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
 			'judul' => 'required',
-			'url' => 'required|file|mimes:pdf|max:20048',
+			'url' => 'required|file|mimes:pdf|max:60048',
 		]);
 
 		// menyimpan data file yang diupload ke variabel $file

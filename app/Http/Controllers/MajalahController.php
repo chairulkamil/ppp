@@ -18,7 +18,7 @@ class MajalahController extends Controller
 			'tanggal_terbit' => 'required',
 			'judul' => 'required',
 			'edisi' => 'required',
-			'url' => 'required|file|mimes:pdf|max:20048',
+			'url' => 'required|file|mimes:pdf|max:60048',
 		]);
 
 		// menyimpan data file yang diupload ke variabel $file

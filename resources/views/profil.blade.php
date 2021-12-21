@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Profil Dit. PPP')
+
 @section('content')
     <div class="row justify-content-between">
         <div class="profil-1 card col-lg-3 scroll p-4" style="background-color: #fff;">
@@ -42,13 +44,13 @@
         <div class="profil-2 card col-lg-9 p-4" style="background-color: #fff;">
             <h5 style="text-align: center;"><b>Publikasi Terbaru</b></h5>
             <div class="profil-card">
-                <img src="{{ asset('assets/images/pppbook.png') }}" alt="">
+                <a href="/publikasi-ppp"><img src="{{ asset('assets/images/pppbook.png') }}" alt=""></a>
             </div>
             <div class="profil-card">
-                <img src="{{ asset('assets/images/newsletter.png') }}" alt="">
+                <a href="/publikasi-newsletter"><img src="{{ asset('assets/images/newsletter.png') }}" alt=""></a>
             </div>
             <div class="profil-card">
-                <img src="{{ asset('assets/images/majalah.png') }}" alt="">
+                <a href="/publikasi-majalah"><img src="{{ asset('assets/images/majalah.png') }}" alt=""></a>
             </div>
         </div>
     </div>

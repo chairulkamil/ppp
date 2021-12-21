@@ -17,7 +17,7 @@ class CreateNewsletterTable extends Migration
             $table->id();
             $table->string('foto');
             $table->string('tanggal_terbit');
-            $table->string('judul');
+            $table->text('judul');
             $table->string('edisi');
             $table->string('url');
             $table->timestamps();

@@ -16,9 +16,9 @@ class NewsletterController extends Controller
 		$this->validate($request, [
 			'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
 			'tanggal_terbit' => 'required',
-			'judul' => 'required',
+			'judul' => 'required|max:1000',
 			'edisi' => 'required',
-			'url' => 'required|file|mimes:pdf|max:20048',
+			'url' => 'required|file|mimes:pdf|max:60048',
 		]);
 
 		// menyimpan data file yang diupload ke variabel $file

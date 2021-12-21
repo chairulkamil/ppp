@@ -5,6 +5,7 @@ use App\Http\Controllers\MajalahController;
 use App\Http\Controllers\PPPController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PublikasiController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +23,9 @@ use App\Http\Controllers\PublikasiController;
 Route::get('/master', function () {
     return view('layouts.master');
 });
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 Route::get('/profil', function () {
     return view('profil');
 });
@@ -79,3 +80,8 @@ Route::get('/publikasi-newsletter', [PublikasiController::class, 'newsletter']);
 
 Route::get('/newsletter-upload', [NewsletterController::class, 'upload']);
 Route::post('/upload/proses-newsletter', [NewsletterController::class, 'proses_upload']);
+
+
+Route::get('/', [HomeController::class, 'index']);
+
+

@@ -58,7 +58,7 @@ ul {
 }
 
 .navbar-nav > li > .dropdown-menu a:hover {
-    background-color: #5B6D8A !important;
+    background-color: #282B35 !important;
     background-image: none !important;
 }
 
@@ -74,7 +74,7 @@ b {
 }
 
 .navbar-toggler {
-    background: #5B6D8A !important;
+    background: #282B35 !important;
     border: none !important;
     padding: 0.625rem 0.375rem !important;
     outline: none !important;
@@ -101,26 +101,27 @@ b {
 
 .dropdown-item {
     width: auto;
-    background-color: #5B6D8A;
+    background-color: #282B35;
 }   
 
 .container-fluid {
     background-image: none !important;
     /* background-color: rgb(160,168,179) !important; */
     max-width: 100% !important;
-    /* margin-right: -100px; */
+    margin-right: -4.8rem;
     
 }   
 
-@media (max-width:500px) {
+@media (max-width:995px) {
     .container-fluid b{
         display: none !important;
-        padding-left: 0px !important;
+        
         
     }
 
     .container-fluid{
-        background-color: #5B6D8A;
+        background-color: #282B35;
+        margin-left: 0px !important;
     }
 }
 
@@ -249,14 +250,170 @@ height: 18.125rem;
     margin-left: 4.375rem;
 }
 
-/* .profil-card img{
-    height: 8rem;
-    width: 6rem;
-    margin: 0 auto;
-    margin-top: 0.7rem;
-    background-color: #C2C9D1;
-} */
+@media (max-width:991px) {
+    .centered-word{
+        margin-top: -13rem;
+    }
 
+    .terlaksana-card{
+        width: 75%;
+    }
+
+    .terlaksana-margin{
+        margin-right: -18rem !important;
+    }
+    
+    .terlaksana img{
+        width: 12.95rem !important;
+    }
+
+    .terlaksana a{
+        width: 12.95rem !important;
+        height: 3.293rem !important;
+    }
+
+    .publikasi{
+        margin-right: 0rem !important;
+    }
+
+    .publikasi img{
+        width: 14rem !important;
+        height: 18rem !important;
+    }
+
+    .publikasi a{
+        width: 14rem !important;
+    }
+    
+    .link-margin{
+        margin-right: -3rem !important;
+    }
+
+    .profil-2{
+        display: none !important;
+    }
+}
+
+/* tablet view */
+@media (max-width:768px) {
+    .profil-1{
+        width: 44rem;
+        height: 30rem;
+        margin: 1rem 0 0 5rem !important;
+        border-radius: 1em;
+    }
+
+    .terlaksana a{
+        width: 10.5rem !important;
+    }
+
+    .terlaksana img{
+        width: 10.5rem !important;
+        height: 9rem !important;
+    }
+
+    .terlaksana-margin{
+        margin-right: -12rem !important;
+    }
+
+    .publikasi img{
+        width: 10.5rem !important;
+        height: 15rem !important;
+    }
+    
+    .publikasi a{
+        width: 10.5rem !important;
+    }
+
+    .skema button{
+        font-size: small !important;
+        width: 7rem !important;
+        height: 4rem !important;
+    }
+
+    .skema-padding{
+        padding-left: 4rem !important;
+    }
+
+    .link-margin img{
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+
+    .panah{
+        display: none !important;
+    }
+}
+
+/* mobile view */
+@media (max-width:480px) {
+    .centered-word p{
+        font-size: medium !important;
+    }
+    
+    .skema button{
+        font-size: xx-small !important;
+        width: 5.2rem !important;
+        height: 2.6rem !important;
+    }
+
+    .skema-padding{
+        padding-left: 2rem !important;
+    }
+
+    .panah{
+        display: none !important;
+    }
+
+    .centered-word a{
+        font-size: x-small !important;
+    }
+    
+    .profil-1{
+        width: 24rem;
+        height: 30rem;
+        margin: 1rem 0 0 2rem !important;
+        border-radius: 1em;
+    }
+
+    .terlaksana{
+        margin-top: 2rem;
+    }
+
+    .terlaksana-margin{
+        margin-right: -11rem !important;
+    }
+
+    .terlaksana img{
+        width: 8rem !important;
+        height: 7rem !important;
+    }
+
+    .terlaksana a{
+        width: 8rem !important;
+        height: 2.5rem !important;
+        font-size: x-small !important;
+    }
+
+    .publikasi img{
+        width: 7rem !important;
+        height: 10rem !important;
+    }
+
+    .publikasi a{
+        width: 7rem !important;
+        font-size: x-small !important;
+    }
+
+    .link-margin{
+        margin-right: -1rem !important;
+    }
+
+    .link-margin img{
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+}
 /* content */
 
 /* footer */
@@ -333,3 +490,5 @@ height: 18.125rem;
 }
 
 /* footer */
+
+

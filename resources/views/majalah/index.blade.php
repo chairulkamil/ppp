@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Majalah')
+
 @section('content')
     <div class="container" style="padding-top: 3rem;">
         <div class="card p-4">

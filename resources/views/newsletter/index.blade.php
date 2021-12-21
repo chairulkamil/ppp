@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Newsletter')
+
 @section('content')
     <div class="container" style="padding-top: 3rem;">
         <div class="card p-4">
@@ -21,7 +23,7 @@
                         <td><img style="width: 8rem; height: 11rem; padding: 0.2rem;" src="{{ url('/data_file/'.$data->foto) }}"></td>
                         <td style="text-align: center;">{{ $data->edisi }}</td>
                         <td style="text-align: center;">{{ $data->tanggal_terbit }}</td>
-                        <td>{{ $data->judul }}</td>
+                        <td style="text-align: center;">{{ $data->judul }}</td>
                         <td style="text-align: center;"><a href="{{ asset('data_url/'.$data->url) }}">Buka PDF!</a></td>
                     </tr>
                     @endforeach
