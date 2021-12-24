@@ -6,6 +6,7 @@ use App\Http\Controllers\PPPController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PublikasiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,4 +85,7 @@ Route::post('/upload/proses-newsletter', [NewsletterController::class, 'proses_u
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('contact-us', [ContactController::class, 'contact']);
+
+Route::post('send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
 

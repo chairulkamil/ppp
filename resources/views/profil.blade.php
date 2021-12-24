@@ -3,6 +3,13 @@
 @section('title', 'Profil Dit. PPP')
 
 @section('content')
+    <nav aria-label="breadcrumb" style="padding: 3rem 0rem 0rem 6rem; margin-bottom: -3rem;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i></a></li>
+            <li class="breadcrumb-item active-menu" aria-current="page">Profil</li>
+        </ol>
+    </nav>
+
     <div class="row justify-content-between">
         <div class="profil-1 card col-lg-3 scroll p-4" style="background-color: #fff;">
             <h5 style="text-align: center;"><b>Sejarah Direktorat Pengembangan Pendanaan Pembangunan</b></h5>

@@ -3,6 +3,13 @@
 @section('title', 'PPP Book')
 
 @section('content')
+    <nav aria-label="breadcrumb" style="padding: 3rem 0rem 0rem 8rem; margin-bottom: -2rem;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i></a></li>
+            <li class="breadcrumb-item active-menu" aria-current="page">PPP Book</li>
+        </ol>
+    </nav>
+
     <div class="container" style="padding-top: 3rem;">
         <div class="card p-4">
             <h4><b>PPP Book</b></h4>
